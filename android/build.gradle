@@ -6,6 +6,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.5.3'
     }
 }
 
@@ -32,7 +33,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.braintreepayments.api:drop-in:4.+'
+    implementation project(':braintree-android-drop-in:Drop-In')
+    // implementation 'com.braintreepayments.api:drop-in:4.+'
     implementation 'com.facebook.react:react-native:+'
 }
 
